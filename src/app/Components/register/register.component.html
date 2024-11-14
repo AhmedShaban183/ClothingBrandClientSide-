@@ -1,0 +1,109 @@
+<div class="container-fluid vh-100 d-flex">
+  <div class="row w-100">
+    <!-- Left side - Registration Form -->
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+      <div class="card" style="border: none;  width: 100%;">
+        <div class="card-body p-5">
+          <!-- Logo or fashion icon -->
+          <div class="text-center mb-3">
+            <img src="Images/logo.png" alt="Fashion Logo" class="img-fluid" style="width: 80px;">
+          </div>
+
+          <h4 class="card-title text-center mb-3" style="font-family: 'Cursive', sans-serif; font-size: 24px; color: #333;">
+            Join Sara Elebiedy Community
+          </h4>
+
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <!-- Name Input -->
+            <div class="form-group mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-user"></i> <!-- User icon -->
+                  </span>
+                </div>
+                <input type="text" id="name" name="name" class="form-control fashion-input" placeholder="Name" formControlName="name" required />
+              </div>
+              <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="text-danger mt-2">
+                Name is required and must be at least 6 characters.
+              </div>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-envelope"></i> <!-- Email icon -->
+                  </span>
+                </div>
+                <input type="email" id="email" name="email" placeholder="Email" class="form-control fashion-input" formControlName="email" required />
+              </div>
+              <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-danger mt-2">
+                Email is required and must be valid.
+              </div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-lock"></i> <!-- Password icon -->
+                  </span>
+                </div>
+                <input
+                [type]="showPassword ? 'text' : 'password'"
+                id="password"
+                name="password"
+                placeholder="Password"
+                class="form-control fashion-input"
+                formControlName="password"
+                required
+              />
+              <button type="button" class="btn btn-outline-secondary" (click)="togglePasswordVisibility()" tabindex="-1">
+                <i [class]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+              </button>                
+              </div>
+              <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-danger mt-2">
+                Password must be at least 6 characters long and contain special characters.
+              </div>
+            </div>
+
+            <!-- Confirm Password Input -->
+            <div class="form-group mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-lock"></i> <!-- Confirm password icon -->
+                  </span>
+                </div>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" class="form-control fashion-input" formControlName="confirmPassword" required [ngClass]="{ 'is-invalid': passwordMismatch }" />
+              </div>
+              <div *ngIf="passwordMismatch" class="text-danger mt-2">
+                Passwords do not match.
+              </div>
+            </div>
+
+            <!-- Error Message -->
+            <div *ngIf="errorMessage" class="alert alert-danger">
+              {{ errorMessage }}
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn fashion-btn" [disabled]="loading || registerForm.invalid || passwordMismatch">
+                {{ loading ? 'Registering...' : 'Join Us' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side - Image -->
+    <div class="col-md-6 d-none d-md-block p-0">
+      <div class="image-section" style="height: 100vh; background-image: url('Images/clothes.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
+  </div>
+</div>

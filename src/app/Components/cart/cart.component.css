@@ -1,0 +1,80 @@
+
+
+/*==================================================================*/
+/* Styling for the cart */
+
+.container{
+  margin-top: 7rem;
+  min-height: 100vh;
+}
+.cart {
+  max-width: 100%;
+  margin: auto;
+  box-shadow: 4px 10px 20px #35121d;
+}
+
+.product-image-cell {
+  width: 80px;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.product-size {
+  font-size: 0.85rem;
+}
+
+.product-quantity button {
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.product-actions a {
+  font-size: 0.9rem;
+}
+
+.total-price {
+  color: #28a745;
+}
+
+
+.btn-outline-secondary{
+  text-align: center;
+  font-weight: 700;
+}
+.butt .fa-solid{
+ padding-bottom: 10px;
+margin-left: -4px; 
+margin-bottom: 35px;
+}
+
+
+.btn-primary {
+  background-color: #a34949e5;;
+  border-radius: 35px;
+  border-color: #a34949e5;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #a34949fd;
+  border-color: #a34949e5;
+}
+tbody,td,th,table{
+  background-color: rgb(248, 248, 248);
+  border: none;
+}

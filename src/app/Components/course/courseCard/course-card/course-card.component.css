@@ -1,0 +1,102 @@
+/* Container and card styles */
+.course-container {
+  min-height: 100vh;
+  margin-top: 5rem;
+}
+
+.ecosyscard {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.07);
+  transition: all 0.15s ease;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  text-align: center;
+  max-height: 250px;
+  padding: 1rem;
+  color: #a34949e5;
+}
+.card-body .price{
+  color: green;
+  font-weight: 500;
+}
+
+.ecosyscontainer {
+  width: 88%;
+  background: #ffffff;
+  border-radius: 20px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecosyscontainer img {
+  width: 100%;
+  max-height: 100%;
+  transition: 0.4s ease;
+  border-radius: 20px;
+}
+
+.ecosyscontainer:hover img {
+  transform: scale(1.1);
+}
+
+/* Button and responsive styles */
+.ecosysbtn {
+  background: #f7edec;
+  border: 0;
+  color: #a34949e5;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 20px;
+  height: 40px;
+  transition: all 0.2s ease;
+}
+
+.ecosysbtn:hover {
+  background: #a34949e5;
+  color: #FFF;
+}
+
+.fa-solid{
+  margin: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Matches Bootstrap 'md' breakpoint */
+  .ecosyscard-body .ecosyscard-title {
+    font-size: 1.4rem;
+  }
+  .ecosyscard-text, .card-body .price {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) { /* Matches Bootstrap 'sm' breakpoint */
+  .ecosyscard-body .ecosyscard-title {
+    font-size: 1.2rem;
+  }
+  .ecosyscard-text, .card-body .price {
+    font-size: 0.8rem;
+  }
+  .ecosysbtn {
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px) { /* Matches Bootstrap 'xs' breakpoint */
+  .ecosyscard-body .ecosyscard-title {
+    font-size: 1.1rem;
+  }
+  .ecosyscard-text, .card-body .price {
+    font-size: 0.75rem;
+  }
+  .ecosysbtn {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}

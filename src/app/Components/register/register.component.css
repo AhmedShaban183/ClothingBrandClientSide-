@@ -1,0 +1,107 @@
+/* Main container styles */
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 5rem ;
+}
+
+/* Left side - Registration Form */
+.card {
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  
+}
+
+/* Card body styling */
+.card-body {
+  padding: 3rem;
+}
+
+/* Title styling */
+.card-title {
+  font-family: 'Cursive', sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Form input styles */
+.form-control {
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+/* Input focus effect */
+.form-control:focus {
+  border-color: #a23e2c;
+  box-shadow: 0 0 5px rgba(162, 62, 44, 0.5);
+}
+
+/* Button styles */
+.fashion-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #641f1ff8 0%, 
+    #b15858f8 40%,
+    rgb(219, 196, 174) 50%,
+    rgb(115, 105, 172) 70%,
+    rgb(33, 28, 94)  100%
+  );
+  background-size: 200%;
+  background-position: left;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 30px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5),
+    inset 0px 2px 2px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+/* Button hover effect */
+.fashion-btn:hover {
+  background-position: right;
+}
+
+/* Error message styles */
+.text-danger {
+  color: #dc3545;
+}
+
+/* Adjustments for form-group spacing */
+.form-group {
+  margin-bottom: 1.5rem; /* Add some margin to form groups */
+}
+
+/* Centering the logo */
+.text-center {
+  text-align: center;
+}
+
+/* Icon size */
+.input-group-text i {
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+/* Image section styles */
+.image-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.fas{
+  border-right: none;
+  padding: 10px;
+}

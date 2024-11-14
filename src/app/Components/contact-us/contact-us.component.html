@@ -1,0 +1,65 @@
+<div class="container-fluid vh-90 py-5 d-flex justify-content-center align-items-center">
+  <div class="row w-100 justify-content-center align-items-center">
+    <!-- Left side - Contact Info -->
+    <div class="col-md-6 d-flex flex-column justify-content-center contact-info">
+      <div class="pl-5">
+          <div class="text-center mb-4">
+            <p class="contact-header" style="color: #a34949e5;">Let's talk about everything!</p>
+            <p style="color:#a34949e5; font-weight: bold;">We love to hear from our fellow sewists.</p>
+            <span>📞 +2012 3456 789</span><br>
+            <span>✉️ Sara&#64;gmail.com</span><br>
+            <span>📍 132 Omer bn Khatab Street Bani Suef, 002 Egypt</span>
+          </div>
+          <div class="text-center">
+            <img class="contact-image " src="../Images/contact.svg" style="width: 150px;" alt="Contact Image">
+          </div>
+        </div>
+      
+    </div>
+
+    <!-- Right side - Contact Form -->
+    <div class="col-md-6 d-flex justify-content-center">
+      <div class="card contact-form-container" style="border-radius: 10px;">
+        <div class="card-body">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group mb-3">
+              <input formControlName="firstName" placeholder="Name" class="form-control contact-input" />
+            </div>
+            <div class="form-group mb-3">
+              <input formControlName="email" placeholder="Email" class="form-control contact-input" />
+            </div>
+            <div class="form-group mb-3">
+              <textarea formControlName="message" placeholder="Send us a message ..." class="form-control message contact-input" rows="3"></textarea>
+              <small class="text-muted float-right">0 of 1000</small>
+            </div>
+            <button type="submit" class="btn btn-block contact-submit-btn">Send Message</button>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
